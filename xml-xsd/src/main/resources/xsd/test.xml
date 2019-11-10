@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tt:ListBean
+	xmlns:tt="http://www.tt.org/listbean.schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.tt.org/listbean.schema ./listbean.schema.xsd"
+>
+<tt:Domain xsi:type="tt:person">
+	<tt:aac001>aac001</tt:aac001>
+	<tt:aac002>aac002</tt:aac002>
+	<tt:aac003>aac003</tt:aac003>
+</tt:Domain>
+<tt:Domain xsi:type="tt:animal">
+	<tt:name>tiger</tt:name>
+	<tt:voice>wo..</tt:voice>
+</tt:Domain>
+</tt:ListBean>

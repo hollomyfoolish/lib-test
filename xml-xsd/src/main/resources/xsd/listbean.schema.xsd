@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.tt.org/listbean.schema"
+	xmlns:tt="http://www.tt.org/listbean.schema"
+	xmlns:tns="http://www.example.org/listbean.schema"
+	elementFormDefault="qualified">
+	
+	<element name="ListBean">
+		<complexType>
+			<sequence>
+				<element name="Domain" type="anyType" minOccurs="0" maxOccurs="unbounded"></element>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="person" type="tt:person"></element>
+	<element name="animal" type="tt:animal"></element>
+	
+	<complexType name="person">
+		<sequence>
+			<element name="aac001" type="string"></element>
+			<element name="aac002" type="string"></element>
+			<element name="aac003" type="string"></element>
+		</sequence>
+	</complexType>
+	<complexType name="animal">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="voice" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>
