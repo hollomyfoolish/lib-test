@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.allen.xsd.sample.schema"
+	xmlns:tns="http://www.example.org/sample.schema"
+	xmlns:mysample="http://www.allen.xsd.sample.schema"
+	elementFormDefault="qualified">
+	
+	<xs:element name="translates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="mysample:shoesize" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="shoesize">
+	  <xs:complexType>
+	  	<xs:sequence>
+	  		<xs:element name="tt" type="mysample:ttype"></xs:element>
+	  	</xs:sequence>
+	  	<xs:attribute name="country" type="xs:string" />
+	  	<xs:attribute name="country2" type="xs:string" />
+	  </xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="ttype" mixed="true">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"></xs:element>
+			<xs:element name="label" type="xs:string"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

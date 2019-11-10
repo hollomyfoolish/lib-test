@@ -1,0 +1,17 @@
+<element name="menu" type="string"></element>
+
+    <complexType name="menu">
+    	<sequence>
+    		<element name="id" type="string"></element>
+    		<element name="text" type="string"></element>
+    		<element name="menu" type="menu" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="button" type="button" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+    <complexType name="button">
+    	<sequence>
+    		<element name="id" type="string"></element>
+    		<element name="text" type="string"></element>
+    		<element name="action" type="string"></element>
+    	</sequence>
+    </complexType>

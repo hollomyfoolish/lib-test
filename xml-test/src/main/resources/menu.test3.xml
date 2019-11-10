@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allenui:menu 
+	xmlns:allenui="http://no.such.website"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://no.such.website ./xsd/test.schema.xsd">
+	<allenui:id>main menu</allenui:id>
+	<allenui:text>main menu</allenui:text>
+	<allenui:menu>
+		<allenui:id>sub-1</allenui:id>
+		<allenui:text>sub menu 1</allenui:text>
+		<allenui:menu>
+			<allenui:id>sub-1-1</allenui:id>
+			<allenui:text>sub-1-1</allenui:text>
+			<allenui:button>
+				<allenui:id>btn-1-1</allenui:id>
+				<allenui:text>btn 1-1</allenui:text>
+				<allenui:action>action 1-1</allenui:action>
+			</allenui:button>
+		</allenui:menu>
+	</allenui:menu>
+	<allenui:menu>
+		<allenui:id>sub-2</allenui:id>
+		<allenui:text>sub menu 2</allenui:text>
+		<allenui:menu>
+			<allenui:id>sub-2-1</allenui:id>
+			<allenui:text>sub-2-1</allenui:text>
+			<allenui:button>
+				<allenui:id>btn-2-1</allenui:id>
+				<allenui:text>btn 2-1</allenui:text>
+				<allenui:action>action 2-1</allenui:action>
+			</allenui:button>
+		</allenui:menu>
+	</allenui:menu>
+	<allenui:button>
+		<allenui:id>main-btn</allenui:id>
+		<allenui:text>main btn</allenui:text>
+		<allenui:action>action main</allenui:action>
+	</allenui:button>
+</allenui:menu>

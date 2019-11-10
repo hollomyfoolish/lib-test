@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mysample:translates
+	xmlns:mysample="http://www.allen.xsd.sample.schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+	xsi:schemaLocation="http://www.allen.xsd.sample.schema ./sample.schema.xsd">
+	<name>aa</name>
+</mysample:translates>

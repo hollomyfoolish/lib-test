@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:allenui="http://no.such.website"
+	elementFormDefault="qualified">
+ 
+ 	<xs:element name="menu" type="menu"></xs:element>
+    <xs:complexType name="menu">
+    	<xs:sequence>
+    		<xs:element name="id" type="xs:string"></xs:element>
+    		<xs:element name="text" type="xs:string"></xs:element>
+    		<xs:element name="menu" type="menu" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    		<xs:element name="button" type="button" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="button">
+    	<xs:sequence>
+    		<xs:element name="id" type="xs:string"></xs:element>
+    		<xs:element name="text" type="xs:string"></xs:element>
+    		<xs:element name="action" type="xs:string"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+ 
+</xs:schema>

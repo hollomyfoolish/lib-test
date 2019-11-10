@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://no.such.website ./test.schema2.xsd">
+	<id>main menu</id>
+	<text>main menu</text>
+	<menu>
+		<id>sub-1</id>
+		<text>sub menu 1</text>
+		<menu>
+			<id>sub-1-1</id>
+			<text>sub-1-1</text>
+			<button>
+				<id>btn-1-1</id>
+				<text>btn 1-1</text>
+				<action>action 1-1</action>
+			</button>
+		</menu>
+	</menu>
+	<menu>
+		<id>sub-2</id>
+		<text>sub menu 2</text>
+		<menu>
+			<id>sub-2-1</id>
+			<text>sub-2-1</text>
+			<button>
+				<id>btn-2-1</id>
+				<text>btn 2-1</text>
+				<action>action 2-1</action>
+			</button>
+		</menu>
+	</menu>
+	<button>
+		<id>main-btn</id>
+		<text>main btn</text>
+		<action>action main</action>
+	</button>
+</menu>

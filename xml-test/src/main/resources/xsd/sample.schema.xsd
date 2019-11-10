@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.allen.xsd.sample.schema"
+	xmlns:mysample="http://www.allen.xsd.sample.schema"
+	elementFormDefault="qualified">
+	
+	<xs:element name="translates"></xs:element>
+	<xs:complexType name="ttype">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"></xs:element>
+			<xs:element name="label" type="xs:string"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
