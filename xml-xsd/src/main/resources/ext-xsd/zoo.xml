@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mt:zoo
+	xmlns:mt="http://www.example.org/m.t"
+	xsi:schemaLocation="http://www.example.org/m.t ./m.t.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<mt:animals>
+		<mt:dog id="001">
+			<mt:name>Tom</mt:name>
+			<mt:type>nice</mt:type>
+		</mt:dog>
+		<mt:dog id="002">
+			<mt:name>Jimmy</mt:name>
+			<mt:type>rude</mt:type>
+		</mt:dog>
+		<mt:cat id="101">
+			<mt:name>Kate</mt:name>
+			<mt:type>weak</mt:type>
+		</mt:cat>
+		<mt:tiger id="201">
+			<mt:name>Howr</mt:name>
+			<mt:type>strong</mt:type>
+		</mt:tiger>
+	</mt:animals>
+</mt:zoo>

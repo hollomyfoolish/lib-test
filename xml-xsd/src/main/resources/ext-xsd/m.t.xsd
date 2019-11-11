@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/m.t"
+	xmlns:mt="http://www.example.org/m.t"
+	elementFormDefault="qualified">
+	
+	<element name="zoo">
+		<complexType>
+			<sequence>
+				<element ref="mt:animals" minOccurs="1" maxOccurs="1"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="animals">
+		<complexType>
+			<sequence>
+				<element name="dog" type="mt:ani" minOccurs="0" maxOccurs="unbounded"></element>
+				<element name="cat" type="mt:ani" minOccurs="0" maxOccurs="unbounded"></element>
+				<element name="tiger" type="mt:ani" minOccurs="0" maxOccurs="unbounded"></element>
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- 
+	<element name="dog" type="mt:animal"></element>
+	<element name="cat" type="mt:animal"></element>
+	<element name="tiger" type="mt:animal"></element>
+    -->
+	<complexType name="ani">
+		<sequence>
+			<group ref="mt:animal-attr"></group>
+		</sequence>
+		<attribute name="id" type="string" use="required"></attribute>
+	</complexType>
+	
+	<group name="animal-attr">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="type" type="mt:animal-type"></element>
+		</sequence>
+	</group>
+	
+	<simpleType name="animal-type">
+		<restriction base="string">
+			<enumeration value="weak"></enumeration>
+			<enumeration value="strong"></enumeration>
+			<enumeration value="nice"></enumeration>
+			<enumeration value="rude"></enumeration>
+		</restriction>
+	</simpleType>
+	
+</schema>
