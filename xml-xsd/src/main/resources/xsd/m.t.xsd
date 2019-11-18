@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/m.t"
+	xmlns:mt="http://www.example.org/m.t"
+	xmlns:tns="http://www.example.org/m.t"
+	elementFormDefault="qualified">
+	
+
+	<group name="animal">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="type" type="mt:animal-type"></element>
+		</sequence>
+	</group>
+	
+	<simpleType name="animal-type">
+		<restriction base="string">
+			<enumeration value="weak"></enumeration>
+			<enumeration value="strong"></enumeration>
+			<enumeration value="nice"></enumeration>
+			<enumeration value="rude"></enumeration>
+		</restriction>
+	</simpleType>
+
+	<complexType name="base-animal">
+		<sequence>
+			<group ref="mt:animal"></group>
+		</sequence>
+		<attribute name="id"></attribute>
+	</complexType>
+	
+	<element name="dog" type="mt:base-animal"></element>
+	<element name="cat" type="mt:base-animal"></element>
+</schema>

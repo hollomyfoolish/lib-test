@@ -20,17 +20,19 @@ public class Test {
 		generate();
 	}
 
+	@SuppressWarnings("unchecked")
 	private static void testXml2() {
 		try {
             JAXBContext context = JAXBContext.newInstance(ListBean.class, Person.class, Animal.class);
             Unmarshaller um = context.createUnmarshaller();
-            ListBean<Domain> list = (ListBean<Domain>) um.unmarshal(new FileInputStream("C:\\dev\\workspaces\\eclipse-workspace\\lib.test\\xml-xsd\\src\\main\\resources\\xsd\\test.xml"));
+            ListBean<Domain> list = (ListBean<Domain>) um.unmarshal(Test.class.getResourceAsStream("/xsd/test.xml"));
             System.out.println(list.getList().size());
-        } catch (JAXBException | FileNotFoundException e) {
+        } catch (JAXBException e) {
             e.printStackTrace();
         }
 	}
 
+	@SuppressWarnings("unchecked")
 	private static void testXml() {
 		Person person = new Person();
         person.aac001="aac001";
@@ -66,7 +68,7 @@ public class Test {
 	
 	public static void generate() {
 		try {
-			CustomSchemaOutputResolver resolver = new CustomSchemaOutputResolver("c:", "test.xsd");
+			CustomSchemaOutputResolver resolver = new CustomSchemaOutputResolver(System.out);
 			JAXBContext context = JAXBContext.newInstance(ListBean.class, Person.class, Animal.class);
 			context.generateSchema(resolver);
 		} catch (JAXBException e) {
